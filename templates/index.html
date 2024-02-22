@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the Sum</title>
 
+    <!--bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyWGpD5U/E5DR/A/GrQj5itN4PrOaZHf" crossorigin="anonymous">
@@ -18,6 +21,49 @@
         .navbar-brand{
             font-weight:bolder;
         }
+        .grouped-div{
+            display:flex;
+        }
+        .formcontents{
+            margin-left:8%;
+            border:solid 2px red;
+            padding:5%;
+            padding-left:11%;
+        }
+        form{
+            width:50%;
+            text-align:center;
+        }
+        .bi-person-plus{
+            padding-right:2%;
+        }
+        .oneline{
+            display:flex;
+        }
+        .bi-person{
+            font-size:150%;
+        }
+        .bi-envelope{
+            font-size:130%;
+        }
+        .bi-lock{
+            font-size:150%;
+        }
+        .bi-briefcase{
+            font-size:150%;
+        }
+        .bi-bag{
+            font-size:130%;
+        }
+        .bi-person-fill{
+            font-size:150%;
+        }
+        .singleline{
+            display:flex;
+        }
+        .singleline{
+            display:flex;
+        }
     </style>
 </head>
 <body>
@@ -26,35 +72,58 @@
     </div>
 
     <center>
-        <div class=''>
-            <form class='form-group mt-3'>
-                <h3>Sign Up Here.</h3>
-                <div>
-                    <input class='form-control w-50 m-2 border-success' type='text' placeholder='Company Name'>
+        <form class='form-group mt-3 p-5'>
+            <h3><i class="bi bi-person-plus"></i>Sign Up Here.</h3>
+            
+            <div class='formcontents'>
+                <div class='grouped-div'>
+                    <div class='oneline'>
+                        <i class="bi bi-person pt-1"></i>
+                        <input class='form-control w-75 m-2 border-success' type='text' placeholder='Company Name'>
+                    </div>
+                    <div class='oneline'>
+                        <i class="bi bi-bag pt-1"></i>
+                        <input class='form-control w-75 m-2 border-success' type='text' placeholder='product'>
+                    </div>
                 </div>
                 
-                <div>
-                    <input class='form-control w-50 m-2 border-success' type='text' placeholder='product'>
+                <div class='grouped-div'>
+                    <div class='oneline'>
+                        <i class="bi bi-envelope pt-1"></i>
+                        <input required class='w-75 border-success form-control m-2' type = 'email' placeholder = 'Email'>
+                    </div>
+                    <div class='oneline'>
+                        <i class="bi bi-briefcase pt-1"></i>
+                        <select class='form-control w-75 m-2 border-success'>
+                            <option>Select Business Level</option>
+                            <option>Manufacturer</option>
+                            <option>Outlet</option>
+                            <option>Distributor</option>
+                        </select>
+                    </div>
                 </div>
-                
-                <div>
-                    <input class='form-control w-50 m-2 border-light' type="text" readonly value='Select Business Level.'>
-                    <select class='form-control w-50 m-2 border-success'>
-                        <option>---</option>
-                        <option>Manufacturer</option>
-                        <option>Outlet</option>
-                        <option>Distributor</option>
-                    </select>
+    
+                <div class='grouped-div'>
+                    <div class='oneline'>
+                        <i class="bi bi-person-fill pt-1"></i>
+                        <input required class='w-75 border-success form-control m-2' type = 'text' placeholder = 'Username'>
+                    </div>
+                    <div class='oneline'>
+                        <i class="bi bi-lock pt-1"></i>
+                        <input required class='w-75 border-success form-control m-2' type = 'password' placeholder = 'Password'>
+                    </div>
                 </div>
-                <button class='btn btn-primary text-light'>Sign Up</button><br>
-                <a href=''>LOGIN</a>
-            </form>
-        </div>
+            </div>
+
+            <button class='btn btn-primary text-light m-3'>Sign Up</button><br>
+            <a href=''>LOGIN</a>
+        </form>
     </center>
 
     <script>
         //javascript here (vuejs)
     </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-aMqHLzWoo5rM6fOT/V8I4v1oOW6Zb6j5t2By5Q9VIqcOXIoFxGEx3nGdaMAzzyHf" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyWGpD5U/E5DR/A/GrQj5itN4PrOaZHf" crossorigin="anonymous"></script>
