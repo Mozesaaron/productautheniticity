@@ -61,6 +61,9 @@
 
     <div class='container mt-5'> <!-- Added container -->
         <div class='row'>
+            <div class='col-md-6 mt-3 pt-1 pr-2 pb-4'> <!-- Adjusted column width for larger screens -->
+                <img class='thisimage' src=" {{ url_for('static', filename='prodauth.jpg') }} ">
+            </div>
             <div class='col-md-6'> <!-- Adjusted column width for larger screens -->
                 <form class='form-contents'>
                     <h4>Sign Up with VerifyPro to Ensure authenticity of your Business Products.</h4>
@@ -84,9 +87,6 @@
                     <p class='text-danger'>By signing up you agree to all our terms and Conditions.</p>
                     <p>Or Have an Account? <a href="">LOGIN</a>.</p>
                 </form>
-            </div>
-            <div class='col-md-6 mt-3 pt-1 pr-2 pb-4'> <!-- Adjusted column width for larger screens -->
-                <img class='thisimage' src=" {{ url_for('static', filename='prodauth.jpg') }} ">
             </div>
         </div>
     </div>
