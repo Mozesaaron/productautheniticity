@@ -5,54 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Authentication</title>
 
-    <!--bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyWGpD5U/E5DR/A/GrQj5itN4PrOaZHf" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
     <style>
-        .navlist{
-            display:flex;
+        .navlist {
+            display: flex;
         }
-        .nav-item{
-            font-weight:bolder;
+        .nav-item {
+            font-weight: bolder;
         }
-        .navbar-brand{
-            font-weight:bolder;
+        .navbar-brand {
+            font-weight: bolder;
         }
         input[type="text"] {
             border: none;
             background: none;
             border-bottom: 1px solid white; /* Add a bottom border */
             padding: 5px; /* Adjust padding as needed */
-            width: 100px; /* Set the width as needed */
+            width: 100%; /* Set the width to fill container */
             font-family: Arial, sans-serif; /* Optional: Specify font family */
             font-size: 16px; /* Optional: Specify font size */
         }
-        form{
-            background-image:url(" {{ url_for('static', filename='formbg.jpg') }} ");
+        .form-contents {
+            border: 2px solid white;
+            background-color: white;
+            padding: 20px; /* Add padding */
         }
-        .form-contents{
-            border:2px solid white;
-            background-color:white;
+        .thisbtn {
+            border-radius: 0%;
         }
-        .thisbtn{
-            border-radius:0%;
+        p {
+            font-size: 80%;
         }
-        p{
-            font-size:80%;
+        .thisimage {
+            width: 100%; /* Adjust image width */
+            height: auto; /* Maintain aspect ratio */
         }
-        .thisimage{
-            width:150%;
-            height:103%;
+        .one-line {
+            display: flex;
+            padding-left: 5%;
         }
-        .one-line{
-            display:flex;
-            padding-left:5%;
-        }
-        .bi-person, .bi-envelope, .bi-person-fill, .bi-person-lock{
-            font-size:120%;
+        .bi-person, .bi-envelope, .bi-person-fill, .bi-lock {
+            font-size: 120%;
         }
     </style>
 </head>
@@ -61,46 +59,40 @@
         <div class='navbar-brand p-3'>VerifyPro</div>
     </div>
 
-    <div class='row'>
-        <div class='col-md-1'></div>
-        <div class='col-md-10 p-5'>
-            <form class='p-1 row'>
-                <div class='col-md-4 form-contents border-light w-50 pt-4 pl-4 pb-4 mt-3 ml-3 mb-3'>
+    <div class='container mt-5'> <!-- Added container -->
+        <div class='row'>
+            <div class='col-md-6'> <!-- Adjusted column width for larger screens -->
+                <form class='form-contents'>
                     <h4>Sign Up with VerifyPro to Ensure authenticity of your Business Products.</h4>
                     <div class='one-line'>
                         <i class="bi bi-person pt-2 text-success"></i>
-                        <input class='form-control w-75 m-2' placeholder='Business Name' type='text'>
+                        <input class='form-control m-2' placeholder='Business Name' type='text'>
                     </div>
                     <div class='one-line'>
                         <i class="bi bi-envelope pt-2 text-success"></i>
-                        <input class='form-control w-75 m-2' placeholder='Email' type='text'>
+                        <input class='form-control m-2' placeholder='Email' type='text'>
                     </div>
                     <div class='one-line'>
                         <i class="bi bi-person-fill pt-2 text-success"></i>
-                        <input class='form-control w-75 m-2' placeholder='Username' type='text'>
+                        <input class='form-control m-2' placeholder='Username' type='text'>
                     </div>
                     <div class='one-line'>
                         <i class="bi bi-lock pt-2 text-success"></i>
-                        <input class='form-control w-75 m-2' placeholder='Password' type='text'>
+                        <input class='form-control m-2' placeholder='Password' type='text'>
                     </div>
                     <button class='thisbtn btn btn-dark text-light w-100'>SIGN UP</button>
                     <p class='text-danger'>By signing up you agree to all our terms and Conditions.</p>
                     <p>Or Have an Account? <a href="">LOGIN</a>.</p>
-                </div>
-                <div class='col-md-4 mt-3 pt-1 pr-2 pb-4'>
-                    <img class='thisimage' src=" {{ url_for('static', filename='prodauth.jpg') }} ">
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class='col-md-6 mt-3 pt-1 pr-2 pb-4'> <!-- Adjusted column width for larger screens -->
+                <img class='thisimage' src=" {{ url_for('static', filename='prodauth.jpg') }} ">
+            </div>
         </div>
-        <div class='col-md-1'></div>
     </div>
 
-    <script>
-        //javascript here (vuejs)
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-aMqHLzWoo5rM6fOT/V8I4v1oOW6Zb6j5t2By5Q9VIqcOXIoFxGEx3nGdaMAzzyHf" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyWGpD5U/E5DR/A/GrQj5itN4PrOaZHf" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha384-TDmJ3U3HPaf2iHAHGupfX7K0DNp5gK/yQb1fKpXBy6omc4j9g9S2y5LTLVQfB3A4" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha384-T/TEiCpd+IuFv3qAjBp6vMvKxBmLQwzA7BSauCE5xyOBMTgqmJuvqwoK0T3zjJe3" crossorigin="anonymous"></script>
 </body>
 </html>
