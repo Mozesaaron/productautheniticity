@@ -12,55 +12,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
-        .navlist {
-            display: flex;
-        }
-        .nav-item {
-            font-weight: bolder;
-        }
         .navbar-brand {
             font-weight: bolder;
         }
-        input[type="text"] {
-            border: none;
-            background: none;
-            border-bottom: 1px solid white; /* Add a bottom border */
-            padding: 5px; /* Adjust padding as needed */
-            width: 100%; /* Set the width to fill container */
-            font-family: Arial, sans-serif; /* Optional: Specify font family */
-            font-size: 16px; /* Optional: Specify font size */
-        }
-        .form-contents {
-            border: 2px solid white;
-            background-color: white;
-            padding: 20px; /* Add padding */
-        }
-        .thisbtn {
-            border-radius: 0%;
-        }
-        p {
-            font-size: 80%;
-        }
-        .thisimage {
-            width: 100%; /* Adjust image width */
-            height: auto; /* Maintain aspect ratio */
-        }
-        .one-line {
-            display: flex;
-            padding-left: 5%;
-        }
-        .bi-person, .bi-envelope, .bi-person-fill, .bi-lock , .bi-chevron-down , .bi-cart4 {
-            font-size: 120%;
-        }
 
-        /* Responsive adjustments */
+        /* Adjustments for smaller screens */
         @media (max-width: 768px) {
-            .col-md-2 {
-                flex: 0 0 100%;
+            .navbar-brand {
+                font-size: 1.5rem; /* Reduce font size for smaller screens */
+            }
+            .col-md-6 {
+                flex: 0 0 100%; /* Full width for smaller screens */
                 max-width: 100%;
             }
-            .m-5 {
-                margin: 3% !important;
+            .m-4 {
+                margin: 1rem; /* Reduce margin for smaller screens */
             }
         }
 
