@@ -15,6 +15,12 @@
         .navbar-brand {
             font-weight: bolder;
         }
+        .logout-link {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
 
         /* Adjustments for smaller screens */
         @media (max-width: 768px) {
@@ -45,7 +51,7 @@
             <div class='navbar-brand p-3'>VerifyPro</div>
         </div>
         <div class='col-md-6'>
-            <div class='navbar-brand p-3'>
+            <div class='navbar-brand p-3 logout-link'>
                 <a class='text-white' href='/login'>Logout</a>
             </div>
         </div>
