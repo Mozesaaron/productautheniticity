@@ -15,10 +15,8 @@
         .navbar-brand {
             font-weight: bolder;
         }
-        .logout-link {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+        .logout{
+            padding-left:2%;
         }
         .navbar{
             display:flex;
@@ -50,11 +48,9 @@
 <body>
     <div class=' nav row nav-bar bg-dark text-white'>
         <div class='col-md-6'>
-            <div class='navbar-brand'>VerifyPro</div>
+            <div class='navbar-brand p-3'>VerifyPro</div>
         </div>
-        <div class='col-md-6'>
-            <div class='navbar-brand logout-link'>logout</div>
-        </div>
+        <div class='col-md-6'></div>
     </div>
 
     <div class='row p-3 mr-5'>
@@ -106,6 +102,7 @@
         </div>
     </div>
 
+    <div class='navbar-brand text-primary logout' href='/login'>logout</div>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 VerifyPro. All Rights Reserved.</p>
