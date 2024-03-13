@@ -57,6 +57,12 @@
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            margin-bottom: 70px; /* Adjust margin bottom to accommodate the footer height */
         }
     </style>
 </head>
@@ -72,44 +78,28 @@
             </div>
             <div class='col-md-6'> <!-- Adjusted column width for larger screens -->
                 <form class='form-contents'>
-                    <h4>Sign Up with VerifyPro to Ensure authenticity of your Business Products.</h4>
-                    <div class='one-line'>
-                        <i class="bi bi-person pt-2 text-success"></i>
-                        <input class='form-control m-2' placeholder='Business Name' type='text'>
+                    <h4> <class='text-danger'>Welcome back!</> Login to VerifyPro</h4>
+                    <div class='form-group'>
+                        <label for="email"><i class="bi bi-envelope text-success"></i> Email</label>
+                        <input class='form-control' id="email" placeholder='Enter your email' type='email' required>
                     </div>
-                    <div class='one-line'>
-                        <i class="bi bi-envelope pt-2 text-success"></i>
-                        <input class='form-control m-2' placeholder='Email' type='text'>
+                    <div class='form-group'>
+                        <label for="password"><i class="bi bi-lock text-success"></i> Password</label>
+                        <input class='form-control' id="password" placeholder='Enter your password' type='password' required>
                     </div>
-                    <div class='one-line'>
-                        <i class="bi bi-cart4 pt-2 text-success"></i>
-                        <input class='form-control m-2' placeholder='Product' type='text'>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
-                    <div class='one-line'>
-                        <i class="bi bi-chevron-down pt-2 text-success"></i>
-                        <select class='form-control m-2'>
-                            <option>Select Business Level</option>
-                            <option>Manufacturing</option>
-                            <option>Outlet</option>
-                            <option>Distributor</option>
-                        </select>
-                    </div>
-                    <div class='one-line'>
-                        <i class="bi bi-person-fill pt-2 text-success"></i>
-                        <input class='form-control m-2' placeholder='Username' type='text'>
-                    </div>
-                    <div class='one-line'>
-                        <i class="bi bi-lock pt-2 text-success"></i>
-                        <input class='form-control m-2' placeholder='Password' type='text'>
-                    </div>
-                    <button class='thisbtn btn btn-dark text-light w-100'>SIGN UP</button>
-                    <p class='text-danger'>By signing up you agree to all our terms and Conditions.</p>
-                    <p>Or Have an Account? <a href="/login">LOGIN</a>.</p>
+                    <button class='btn btn-primary btn-block'><a class='text-light' href='/dashboard'>LOGIN</a></button>
+                    <p class="mt-3">Don't have an account? <a href="/">Sign Up</a></p>
                 </form>
+                
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 VerifyPro. All Rights Reserved.</p>
     </footer>
