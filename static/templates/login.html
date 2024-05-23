@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .login-container {
+            display: flex;
+            align-items: flex-start; /* Align items to the start */
+            justify-content: center;
+            margin-top: 100px; /* Adjust as needed */
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .bgcolor {
+            background: #a0c43b;
+        }
+        .btn {
+            color: white;
+            background-color: #a0c43b;
+            font-weight: bolder;
+        }
+        h2 {
+            color: #a0c43b;
+        }
+        .username{
+            color: #a0c43b;
+        }
+        .password{
+            color: #a0c43b;
+        }
+        .rememberme {
+            color: #a0c43b;
+        }
+        .roundborders {
+            border: 5px solid white;
+            border-radius: 100%;
+        }
+        .text {
+            font-weight: bolder;
+            font-size: 200%;
+        }
+        .headerrow {
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bgcolor">
+    <div class="row headerrow">
+        <div class="col-md-10">
+            <img src="{{ url_for('static', filename='images/liferootslogo.png') }}" class="roundborders">
+        </div>
+        <div class="col-md-2 text-light text">
+            liferoots
+        </div>
+    </div>
+</div>
+
+<div class="container login-container">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label class="username" for="email">Username</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label class="password" for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label rememberme" for="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-block">Login</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
